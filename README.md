@@ -215,14 +215,3 @@ Rice, Maize, Chickpea, Kidney Beans, Pigeon Peas, Moth Beans, Mung Bean, Black G
 Run interactively with `python main.py --interactive` to enter custom values.
 
 ---
-
-## 🎓 Viva Quick Reference
-
-| Question | Answer |
-| :--- | :--- |
-| How does this differ from ML? | ML learns implicit weights from data (black box). This system uses explicit symbolic rules curated by domain experts — fully transparent and explainable. |
-| What inference strategy? | **Forward Chaining (Data-Driven)** — starts with known facts (soil, climate) and fires rules forward until a recommendation is derived. |
-| How are conflicting rules handled? | Three-tier **Conflict Resolution**: saliency (priority) → specificity (number of conditions) → certainty factor. |
-| What is the Explanation Facility? | Maintains a history of all evaluated rules. `explain_how()` produces an audit trail; `explain_why_not()` produces counterfactual analysis of rejected crops. |
-| What are Certainty Factors? | A confidence score per rule (0–1) that reflects how well the input values fit within a rule's bounds. Values near the midpoint of a range score higher than values near the boundary. |
-| What is multi-level reasoning? | Level 1 rules detect soil conditions and assert intermediate facts. Level 2 rules are triggered by those facts — demonstrating chained (multi-pass) forward inference. |
